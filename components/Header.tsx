@@ -4,6 +4,7 @@ import {
   BeakerIcon,
   ChevronDownIcon,
   HomeIcon,
+  MenuIcon,
   SearchIcon,
 } from "@heroicons/react/solid";
 import {
@@ -16,6 +17,7 @@ import {
   VideoCameraIcon,
   StarIcon,
 } from "@heroicons/react/outline";
+import Sign from "./Sign";
 
 function Header() {
   return (
@@ -47,7 +49,7 @@ function Header() {
         <button type="submit" hidden />
       </form>
 
-      <div className="flex">
+      <div className="flex items-center text-gray-500 space-x-2 mx-5 hidden lg:inline-flex">
         <SparklesIcon className="icon" />
         <GlobeIcon className="icon" />
         <VideoCameraIcon className="icon" />
@@ -57,6 +59,12 @@ function Header() {
         <PlusIcon className="icon" />
         <SpeakerphoneIcon className="icon" />
       </div>
+      <div className="ml-5 flex items-center lg:hidden">
+        <MenuIcon className="icon" />
+      </div>
+
+      {/* Sign in Sign out buttn */}
+      <Sign />
     </div>
   );
 }
