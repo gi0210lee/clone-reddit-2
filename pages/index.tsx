@@ -1,12 +1,11 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Header from "../components/Header";
+import Feed from "../components/Feed";
 import PostBox from "../components/PostBox";
-import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <div className="max-w-5xl my-7 mx-auto">
       <Head>
         <title>Clone Reddit 2.0</title>
       </Head>
@@ -15,6 +14,7 @@ const Home: NextPage = () => {
       <PostBox />
 
       {/* Feed */}
+      <Feed />
 
       {/* Sidebar */}
     </div>

@@ -6,6 +6,7 @@ const nextConfig = {
       "logos-world.net",
       "cdn-icons-png.flaticon.com",
       "avatars.dicebear.com",
+      "picsum.photos",
     ],
   },
 };
