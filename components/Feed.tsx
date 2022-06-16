@@ -2,6 +2,7 @@ import { useQuery } from "@apollo/client";
 import React from "react";
 import { GET_ALL_POSTS, GET_POST_BY_TOPIC } from "../graphql/queries";
 import Post from "./Post";
+import { Jelly } from "@uiball/loaders";
 
 type Props = {
   topic?: string;
@@ -27,11 +28,21 @@ function Feed({ topic }: Props) {
   //       })
   //     : useQuery(GET_ALL_POSTS);
 
+  // if (loading)
+  //   return (
+  //     <div className="flex w-full justify-center p-10 text-xl">
+  //       <Jelly size={50} color="#FF4501" />
+  //     </div>
+  //   );
+  // if (error) return <>{console.log(error.message)} Error: Feed.tsx</>;
+
   const posts: Post[] = topic ? data?.getPostListByTopic : data?.getPostList;
 
   return (
     <div>
-      {posts && posts.map((post: Post) => <Post key={post.id} post={post} />)}
+      {posts?.map((post: Post) => (
+        <Post key={post.id} post={post} />
+      ))}
     </div>
   );
 }

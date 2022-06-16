@@ -21,7 +21,6 @@ type Props = {
 };
 
 function PostBox({ subreddit }: Props) {
-  console.log("subreddit", subreddit);
   const { data: session } = useSession();
   const [addPost] = useMutation(ADD_POST, {
     refetchQueries: [{ query: GET_ALL_POSTS }, "getPostList"],
@@ -126,7 +125,7 @@ function PostBox({ subreddit }: Props) {
   return (
     <form
       className={
-        "sticky top-15 z-50 bg-white border rounded-md border-gray-300 p-2"
+        "sticky top-15 z-50 bg-white border rounded-md border-gray-300 p-2 top-20"
       }
       onSubmit={handleSubmit(onSubmit)}
     >

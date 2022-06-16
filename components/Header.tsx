@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import {
   BeakerIcon,
@@ -21,15 +22,19 @@ import Sign from "./Sign";
 
 function Header() {
   return (
-    <div className="flex  bg-white px-4 shadow-sm sticky top-0 z-50">
-      <div className="relative h-10 w-20 flex-shrink-0 cursor-pointer">
-        <Image
-          priority={true}
-          objectFit="contain"
-          src="https://logos-world.net/wp-content/uploads/2020/10/Reddit-Logo.png"
-          layout="fill"
-          alt=""
-        />
+    <div className="flex items-center bg-white px-4 shadow-sm sticky top-0 z-50">
+      <div>
+        <Link href="/">
+          <a className="flex relative h-10 w-20 flex-shrink-0 cursor-pointer">
+            <Image
+              priority={true}
+              objectFit="contain"
+              src="https://logos-world.net/wp-content/uploads/2020/10/Reddit-Logo.png"
+              layout="fill"
+              alt=""
+            />
+          </a>
+        </Link>
       </div>
 
       <div className="flex items-center mx-7 xl:min-w-[300px]">
@@ -49,7 +54,7 @@ function Header() {
         <button type="submit" hidden />
       </form>
 
-      <div className="flex items-center text-gray-500 space-x-2 mx-5 hidden lg:inline-flex">
+      <div className="hidden items-center text-gray-500 space-x-2 mx-5 lg:inline-flex">
         <SparklesIcon className="icon" />
         <GlobeIcon className="icon" />
         <VideoCameraIcon className="icon" />

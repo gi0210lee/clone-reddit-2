@@ -15,13 +15,21 @@ function Avatar({ seed, large }: Props) {
         large && "h-20 w-20"
       }`}
     >
-      <Image
-        src={`https://avatars.dicebear.com/api/avataaars/${
-          session?.user?.name || "placeholder"
-        }.svg`}
-        layout="fill"
-        alt=""
-      />
+      {seed ? (
+        <Image
+          src={`https://avatars.dicebear.com/api/avataaars/${seed}.svg`}
+          layout="fill"
+          alt=""
+        />
+      ) : (
+        <Image
+          src={`https://avatars.dicebear.com/api/avataaars/${
+            session?.user?.name || "placeholder"
+          }.svg`}
+          layout="fill"
+          alt=""
+        />
+      )}
     </div>
   );
 }
