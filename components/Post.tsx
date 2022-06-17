@@ -72,7 +72,7 @@ function Post({ post }: Props) {
       },
     });
 
-    console.log("PLACED VOTE: ", data);
+    console.log("PLACED VOTE: ", newVote);
   };
 
   const displayVotes = (data: any) => {

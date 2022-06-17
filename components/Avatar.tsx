@@ -17,7 +17,9 @@ function Avatar({ seed, large }: Props) {
     >
       {seed ? (
         <Image
-          src={`https://avatars.dicebear.com/api/avataaars/${seed}.svg`}
+          src={`https://avatars.dicebear.com/api/avataaars/${
+            seed || "placeholder"
+          }.svg`}
           layout="fill"
           alt=""
         />

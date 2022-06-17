@@ -37,7 +37,6 @@ function PostBox({ subreddit }: Props) {
   } = useForm<FormData>();
 
   const onSubmit = async (formData: FormData) => {
-    console.log(formData);
     const notification = toast.loading("Creating new Toast...");
 
     try {

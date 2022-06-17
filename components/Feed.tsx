@@ -38,6 +38,7 @@ function Feed({ topic }: Props) {
 
   const posts: Post[] = topic ? data?.getPostListByTopic : data?.getPostList;
 
+  console.log("posts", posts);
   return (
     <div>
       {posts?.map((post: Post) => (
